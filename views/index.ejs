@@ -1,0 +1,27 @@
+<h1>HOME</h1>
+
+<!--<% if(profile.length) { %>
+    <% for(var i = 0 ; i < profile.length ; i++) { %>
+        <%= profile[i].name %>
+        <%= profile[i].comment %>
+        <%= profile[i].date %>
+    <% } %>
+<% } else { %>
+    No entires! <a href="/new-entry">Add one</a>
+<% } %>-->
+
+
+<p><a href="home/new-entry">Leave a comment</a></p>
+<p><a href="/test">past commenters</a></p>
+<hr>
+<% if(profile.length) { %>
+    <% profile.forEach(function(entry) { %>
+        <p><%= entry.name %></p>
+        <p><%= entry.comment %></p>
+        <%= entry.date %>
+        <hr>
+   <% }) %>
+<% } else { %>
+    No entries!
+<% } %>
+    
